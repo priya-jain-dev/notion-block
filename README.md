@@ -9,4 +9,14 @@ So, will try to build on top off that option.
 2. Add Basic html elements - h1. h2, h3, paragraph ✅
 3. Giving context menu option ✅
 4. Giving floating menu on word select
-5. drag-drop option
+5. drag-drop option!
+6. Support keyboard Enter and Delete keys
+
+
+## Working example
+- Block
+[Working example](screenshort-1.png)
+
+- Context menu
+Type slash to open context menu
+![Context menu](screenshort-2.png)
