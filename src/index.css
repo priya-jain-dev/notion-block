@@ -83,3 +83,17 @@ body {
   background: #f5f6fb;
   border-radius: 0.5rem;
 }
+
+/* PLACEHOLDERS*/
+
+.Block .bn-is-empty:before {
+  content: "";
+  pointer-events: none;
+  height: 0;
+  position: absolute;
+  font-style: italic;
+}
+
+.Block.bn-is-empty:before {
+  content: "Enter text or type '/' for commands";
+}

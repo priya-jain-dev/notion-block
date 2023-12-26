@@ -117,7 +117,7 @@ const EditableBlock = ({ id, html, tag, addBlock, deleteBlock }) => {
         />
       )}
       <ContentEditable
-        className="Block"
+        className={"Block"}
         innerRef={contentEditable}
         html={block.html}
         tagName={block.tag}
