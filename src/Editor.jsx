@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Editor.css";
 import { uid } from "./util/uid";
 import EditableBlock from "./EditableBlock";
 import { setCaretToEnd } from "./util/setCaretToEnd";
@@ -50,6 +49,7 @@ function Editor() {
       previousBlock.focus();
     }
   };
+
   return (
     <div className="Editor">
       {blocks.map((block, key) => {
