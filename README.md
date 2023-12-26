@@ -5,8 +5,8 @@ So, will try to build on top off that option.
 
 ## Building basic notion app functionality
 
----1. Option to create block---
----2. Add Basic html elements - h1. h2, h3, paragraph---
----3. Giving context menu option---
+1. Option to create block ✅
+2. Add Basic html elements - h1. h2, h3, paragraph ✅
+3. Giving context menu option ✅
 4. Giving floating menu on word select
 5. drag-drop option
