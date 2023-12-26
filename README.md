@@ -15,7 +15,7 @@ So, will try to build on top off that option.
 
 ## Working example
 - Block
-[Working example](screenshort-1.png)
+![Working example](screenshort-1.png)
 
 - Context menu
 Type slash to open context menu
