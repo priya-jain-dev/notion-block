@@ -86,7 +86,7 @@ body {
 
 /* PLACEHOLDERS*/
 
-.Block .bn-is-empty:before {
+/* .Block .bn-is-empty:before {
   content: "";
   pointer-events: none;
   height: 0;
@@ -96,4 +96,4 @@ body {
 
 .Block.bn-is-empty:before {
   content: "Enter text or type '/' for commands";
-}
+} */

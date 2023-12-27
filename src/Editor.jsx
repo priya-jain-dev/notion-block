@@ -15,8 +15,10 @@ function Editor() {
   const [blocks, setBlocks] = useState([initialBlock]);
 
   const updatePageHandler = (updatedBlock) => {
-    const index = blocks.map((b) => b.id).indexOf(updatedBlock.id);
-    const updatedBlocks = [...blocks];
+    console.log(updatedBlock);
+    const _blocks = blocks;
+    const index = _blocks.map((b) => b.id).indexOf(updatedBlock.id);
+    const updatedBlocks = [..._blocks];
     updatedBlocks[index] = {
       ...updatedBlocks[index],
       tag: updatedBlock.tag,
@@ -26,18 +28,24 @@ function Editor() {
   };
 
   const addBlockHandler = (currentBlock) => {
-    const newBlock = { id: uid(), html: "", tag: "p" };
-    const index = blocks.map((b) => b.id).indexOf(currentBlock.id);
-    const updatedBlocks = [...blocks];
-    updatedBlocks.splice(index + 1, 0, newBlock);
-    setBlocks(updatedBlocks);
+    setBlocks((prevBlocks) => {
+      console.log(prevBlocks);
+      const newBlock = { id: uid(), html: "", tag: "p" };
+      const index = prevBlocks.findIndex((b) => b.id === currentBlock.id);
+      if (index !== -1) {
+        const updatedBlocks = [...prevBlocks];
+        updatedBlocks.splice(index + 1, 0, newBlock);
+        return updatedBlocks;
+      }
+      return prevBlocks;
+    });
+
     setTimeout(() => {
       if (currentBlock.ref.nextElementSibling) {
         currentBlock.ref.nextElementSibling.focus();
       }
     }, 0);
   };
-
   const deleteBlockHandler = (currentBlock) => {
     const previousBlock = currentBlock.ref.previousElementSibling;
     if (previousBlock) {
